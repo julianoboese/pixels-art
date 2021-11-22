@@ -5,14 +5,13 @@
   font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header {
+h1 {
   height: 80px;
   border: 1px solid black;
   line-height: 80px;
 }
 
 #color-palette {
-  height: 120px;
   padding: 20px;
   border: 1px solid black;
 }
@@ -38,4 +37,17 @@ header {
 
 #black {
   background-color: black;
+}
+
+#pixel-board {
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.pixel {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  vertical-align: top;
 }
