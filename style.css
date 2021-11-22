@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  text-align: center;
+  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  height: 80px;
+  border: 1px solid black;
+  line-height: 80px;
+}
+
+#color-palette {
+  height: 120px;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+#color-palette .color {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+#cyan {
+  background-color: cyan;
+}
+
+#magenta {
+  background-color: magenta;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+#black {
+  background-color: black;
+}
