@@ -35,3 +35,15 @@ function paintPixel() {
 }
 
 paintPixel();
+
+function clearBoard() {
+  const clearButton = document.getElementById('clear-board');
+  clearButton.addEventListener('click', () => {
+    const allPixels = document.getElementsByClassName('pixel');
+    for (let i = 0; i < allPixels.length; i += 1) {
+      allPixels[i].style.backgroundColor = 'white';
+    }
+  });
+}
+
+clearBoard();
