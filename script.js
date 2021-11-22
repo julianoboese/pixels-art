@@ -11,3 +11,27 @@ window.onload = () => {
     board.appendChild(pixelLine);
   }
 };
+
+function selectColor() {
+  const palette = document.getElementById('color-palette');
+  palette.addEventListener('click', (event) => {
+    const selected = document.querySelector('.selected');
+    selected.classList.remove('selected');
+    event.target.classList.add('selected');
+  });
+}
+
+selectColor();
+
+function paintPixel() {
+  const allPixels = document.getElementById('pixel-board');
+  allPixels.addEventListener('click', (event) => {
+    const selectedElement = document.querySelector('.selected');
+    const selectedColor = selectedElement.id;
+    if (event.target.className === 'pixel') {
+      event.target.style.backgroundColor = selectedColor;
+    }
+  });
+}
+
+paintPixel();
