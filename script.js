@@ -2,6 +2,8 @@ const board = document.getElementById('pixel-board');
 
 function generateRandomColor() {
   document.getElementById('black').style.backgroundColor = 'black';
+  /** Função abaixo utilizada para geração de cores aleatórias;
+   * Source: https://css-tricks.com/snippets/javascript/random-hex-color/ */
   const randomColor1 = Math.floor(Math.random() * 16777215).toString(16);
   const randomColor2 = Math.floor(Math.random() * 16777215).toString(16);
   const randomColor3 = Math.floor(Math.random() * 16777215).toString(16);
