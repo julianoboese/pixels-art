@@ -23,30 +23,10 @@ h1 {
   border: 1px solid black;
 }
 
-#cyan {
-  background-color: cyan;
-}
-
-#magenta {
-  background-color: magenta;
-}
-
-#yellow {
-  background-color: yellow;
-}
-
-#black {
-  background-color: black;
-}
-
-#input-size, #clear {
+#input-size , #clear {
   display: inline-block;
   padding: 20px;
   border: 1px solid black;
-}
-
-#board-size:invalid {
-  border: solid red 3px;
 }
 
 #clear {
@@ -57,6 +37,10 @@ h1 {
 
 #board-size {
   width: 200px;
+}
+
+#board-size:invalid {
+  border: solid red 3px;
 }
 
 #pixel-board {
