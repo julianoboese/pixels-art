@@ -1,4 +1,6 @@
 const board = document.getElementById('pixel-board');
+const generateInput = document.getElementById('board-size');
+const generateButton = document.getElementById('generate-board');
 
 function generateRandomColor() {
   document.getElementById('black').style.backgroundColor = 'black';
@@ -42,23 +44,27 @@ window.addEventListener('load', () => {
 });
 
 function changeBoardSize() {
-  const generateButton = document.getElementById('generate-board');
-  const generateInput = document.getElementById('board-size');
-  generateButton.addEventListener('click', () => {
-    if (generateInput.value === '') {
-      alert('Board inválido!');
-    } else {
-      const allPixels = document.getElementById('pixel-board');
-      while (allPixels.firstChild) {
-        allPixels.removeChild(allPixels.firstChild);
-      }
-      createBoard(generateInput.value);
-      generateInput.value = '';
+  if (generateInput.value === '') {
+    alert('Board inválido!');
+  } else {
+    while (board.firstChild) {
+      board.removeChild(board.firstChild);
+    }
+    createBoard(generateInput.value);
+    generateInput.value = '';
+  }
+}
+
+function changeBoardEvents() {
+  generateButton.addEventListener('click', changeBoardSize);
+  generateInput.addEventListener('keyup', (event) => {
+    if (event.key === 'Enter') {
+      changeBoardSize();
     }
   });
 }
 
-changeBoardSize();
+changeBoardEvents();
 
 function selectColor() {
   const palette = document.getElementById('color-palette');

@@ -7,45 +7,78 @@
 
 h1 {
   height: 80px;
-  border: 1px solid black;
+  border-bottom: 10px solid #2fc18c;
   line-height: 80px;
+  background-color: #036b52;
+  color: white;
 }
 
 #color-palette {
   padding: 20px;
-  border: 1px solid black;
+  border-bottom: 10px solid #2fc18c;
 }
 
 #color-palette .color {
+  display: inline-block;
   width: 60px;
   height: 60px;
-  display: inline-block;
   border: 1px solid black;
+}
+
+#input-clear {
+  background-color: #036b52;
+  font-size: 0;
 }
 
 #input-size , #clear {
   display: inline-block;
   padding: 20px;
-  border: 1px solid black;
-}
-
-#clear {
-  position: absolute;
-  border: 1px solid black;
-
 }
 
 #board-size {
   width: 200px;
+  border: 3px solid #2fc18c;
 }
 
 #board-size:invalid {
   border: solid red 3px;
 }
 
+#generate-board {
+  border: 3px solid #2fc18c;
+  background-color: #2fc18c;
+  color: white;
+  font-weight: 600;
+}
+
+#generate-board:hover {
+  cursor: pointer;
+  background-color: #7dccaf;
+  border-color: #7dccaf;
+}
+
+#clear {
+  position: absolute;
+}
+
+#clear-board {
+  border: 3px solid #2fc18c;
+  background-color: white;
+  color: #2fc18c;
+  font-weight: 600;
+}
+
+#clear-board:hover {
+  cursor: pointer;
+  color: #036b52;
+}
+
 #pixel-board {
   padding: 20px;
-  border: 1px solid black;
+  border-top: 10px solid #2fc18c;
+  border-bottom: 10px solid #2fc18c;
+  white-space: nowrap;
+  overflow-x: scroll;
 }
 
 .pixel {
