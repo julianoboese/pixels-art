@@ -1,16 +1,7 @@
-window.onload = () => {
-  const board = document.getElementById('pixel-board');
-  for (let j = 1; j <= 5; j += 1) {
-    const pixelLine = document.createElement('div');
-    for (let i = 1; i <= 5; i += 1) {
-      const pixelSquare = document.createElement('div');
-      pixelSquare.className = 'pixel';
-      pixelSquare.style.backgroundColor = 'white';
-      pixelLine.appendChild(pixelSquare);
-    }
-    board.appendChild(pixelLine);
-  }
-};
+const board = document.getElementById('pixel-board');
+window.onload = createBoard(5);
+
+
 
 function selectColor() {
   const palette = document.getElementById('color-palette');
@@ -20,12 +11,12 @@ function selectColor() {
     event.target.classList.add('selected');
   });
 }
+Math.random()
 
 selectColor();
 
 function paintPixel() {
-  const allPixels = document.getElementById('pixel-board');
-  allPixels.addEventListener('click', (event) => {
+  board.addEventListener('click', (event) => {
     const selectedElement = document.querySelector('.selected');
     const selectedColor = selectedElement.id;
     if (event.target.className === 'pixel') {
@@ -47,3 +38,46 @@ function clearBoard() {
 }
 
 clearBoard();
+
+function changeBoardSize() {
+  const generateButton = document.getElementById('generate-board');
+  const generateInput = document.getElementById('board-size');
+  generateButton.addEventListener('click', () => {
+    if (generateInput.value === '') {
+      alert('Board inválido!');
+    } else {
+      const allPixels = document.getElementById('pixel-board');
+      while (allPixels.firstChild) {
+        allPixels.removeChild(allPixels.firstChild);
+      }
+      createBoard(generateInput.value);
+      generateInput.value = '';
+    }
+  });
+}
+
+changeBoardSize();
+
+function createBoard(N) {
+  const side = checkInput(N);
+  for (let i = 1; i <= side; i += 1) {
+    const pixelLine = document.createElement('div');
+    for (let j = 1; j <= side; j += 1) {
+      const pixelSquare = document.createElement('div');
+      pixelSquare.className = 'pixel';
+      pixelSquare.style.backgroundColor = 'white';
+      pixelLine.appendChild(pixelSquare);
+    }
+    board.appendChild(pixelLine);
+  }
+}
+
+function checkInput(inputValue) {
+  const side = inputValue;
+  if (side < 5) {
+    return 5;
+  } if (side > 50) {
+    return 50;
+  }
+  return side;
+}
