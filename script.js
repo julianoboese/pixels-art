@@ -76,8 +76,9 @@ function paintPixel() {
   board.addEventListener('click', (event) => {
     const selectedElement = document.querySelector('.selected');
     const selectedColor = selectedElement.style.backgroundColor;
+    const selectedPixel = event.target;
     if (event.target.className === 'pixel') {
-      event.target.style.backgroundColor = selectedColor;
+      selectedPixel.style.backgroundColor = selectedColor;
     }
   });
 }
