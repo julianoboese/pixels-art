@@ -1,9 +1,9 @@
 # Pixels Art
-Projeto da [Trybe](https://www.betrybe.com/) - Bloco 5 - Aplicação para construção de imagens com pixels coloridos feita com HTML, CSS e Javascript.
+Projeto da [Trybe](https://www.betrybe.com/) - Bloco 5 - Aplicação para construção de imagens com pixels coloridos feita com HTML, CSS e JavaScript.
 
 ## 💻 Projeto
 
-Aplicação que contém uma paleta de cores funcional para criação de desenhos em pixels feita com HTML, CSS e Javascript.
+Aplicação que contém uma paleta de cores funcional para criação de desenhos em pixels feita com HTML, CSS e JavaScript.
 
 <details>
   <summary><strong>🏆 Meu desempenho</strong></summary><br />
@@ -23,12 +23,6 @@ Aplicação que contém uma paleta de cores funcional para criação de desenhos
 
 - Manipular o DOM;
 - Manipular o JavaScript.
-
-## ⬇️ Instalando dependências
-
-```bash
-npm install
-``` 
 
 ## 💬 Contatos
 
